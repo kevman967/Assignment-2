@@ -4,7 +4,8 @@ vertex::vertex(){
  value =0;
 }
 vertex::vertex(int one,double two){
-
+    id = one;
+    value = two;
 }
 vertex::vertex(vertex& copy){
     id = copy.get_id();
