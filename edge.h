@@ -1,3 +1,4 @@
+#pragma once
 #include "vertex.h"
 class edge{
     private:
