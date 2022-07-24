@@ -5,11 +5,12 @@
 class undirected: public Graph
 {
     private:
-        vertex* v;
-        edge* e;
+        vector<vertex> vertices;
+        vector<edge> edges;
+        int V,E;
     public:
         undirected();
-        undirected(undirected&);
+        //undirected(undirected&);
         //add in one vertex; bool returns if it is added successfully.
         virtual bool addvertex(vertex& v);
         //Bonus question: add in a set of vertices; bool retruns if it is added 
