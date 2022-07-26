@@ -1,13 +1,14 @@
+#pragma once
 #include "edge.h"
 #include "vertex.h"
 #include <string>
 using namespace std;
 
-class Graph {
+class graph {
 public:
-Graph();
-virtual ~Graph();
-Graph(const Graph &other);
+graph();
+virtual ~graph();
+graph(const graph &other);
 //add in one vertex; bool returns if it is added successfully.
 virtual bool addvertex(vertex& v)=0;
 //Bonus question: add in a set of vertices; bool retruns if it is added 

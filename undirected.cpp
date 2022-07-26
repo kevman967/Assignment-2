@@ -1,45 +1,39 @@
 #include "undirected.h"
-#include <vector>
+#include <iostream>
 using namespace std;
 undirected::undirected(){
-    V = 0;
-    E =0;
+    cout<<"undirected object has been created\n";
+}
+undirected::undirected(undirected& one){
+
 }
 bool undirected::addvertex(vertex& v){
-    vertices.push_back(v);
-    V++;
-    return true;
+ return true;
 }
-//check
 bool undirected::removevertex(int vertexID){
-    for(int i=0;i<vertices.size();i++)
-    {
-        if(vertices[i].get_id()==vertexID){
-            for(int j = 0;j<edges.size();j++){
-                if(edges[j].get_starting_vertex().get_id()==vertexID || edges[j].get_ending_vertex().get_id()==vertexID){
-                    edges.erase(edges.begin()+j);
-                }
-            }
-            vertices.erase(vertices.begin()+i);
-            return true;
-        }
-        else
-            return false;
-    }
+return true;
 }
 bool undirected::addedge(edge& e){
-    edges.push_back(e);
-    E++;
-    return true;
+return true;
 }
 bool undirected::remove(edge& e){
-    for(int i = 0;i<edges.size();i++){
-        if(edges[i].get_starting_vertex().get_id()==e.get_starting_vertex().get_id())
-            if(edges[i].get_ending_vertex().get_id()==e.get_ending_vertex().get_id()){
-                edges.erase(edges.begin()+i);
-                return true;
-            }
-    }
-    return false;
+return true;
 }
+bool undirected::searchvertex(const vertex& v){
+return true;
+}
+bool undirected::searchedge(const edge& e){
+return true;
+}
+void undirected::display()const{
+
+}
+string undirected::toString()const {
+string one="hello";
+return one;
+}
+bool undirected::clean(){
+return true;
+}
+
 

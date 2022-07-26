@@ -1,7 +1,5 @@
 #include "edge.h"
-#include "edge.cpp"
 #include "vertex.h"
-#include "vertex.cpp"
 #include <iostream>
 using namespace std;
 int main(){
@@ -28,7 +26,7 @@ int main(){
     edge1.set_ending_vertex(three);
     cout<<edge1.get_weight()<<":"<<edge1.get_starting_vertex().get_id()<<":"<<edge1.get_starting_vertex().get_value()<<endl;
     cout<<edge1.get_ending_vertex().get_id()<<":"<<edge1.get_ending_vertex().get_value()<<endl;
-
+    
 
 
     
