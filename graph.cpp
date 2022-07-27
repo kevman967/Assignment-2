@@ -7,6 +7,6 @@ graph::graph(){
 graph::~graph(){
     cout<<"graph destroyed\n";
 }
-graph::graph(const graph &other){
+graph::graph( graph &other){
 
 }

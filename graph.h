@@ -8,7 +8,7 @@ class graph {
 public:
 graph();
 virtual ~graph();
-graph(const graph &other);
+graph( graph &other);
 //add in one vertex; bool returns if it is added successfully.
 virtual bool addvertex(vertex& v)=0;
 //Bonus question: add in a set of vertices; bool retruns if it is added 
@@ -33,11 +33,11 @@ virtual bool searchedge( edge& e) =0;
 //Bonus question: display the path that contains the edge;
 //virtual void display(edge& e) const = 0;
 // display the whole graph with your own defined format
-virtual void display() const = 0;
+virtual void display()  = 0;//const
 // convert the whole graph to a string such as 1-2-4-5; 1-3-5; each path is 
 //separated by ';'
 // define your own format of a string representation of the graph.
-virtual string toString () const = 0;
+virtual string toString ()  = 0;//const
 //remove all the vertices and edges;
 virtual bool clean() = 0;
 };

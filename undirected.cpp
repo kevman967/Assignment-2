@@ -1,18 +1,29 @@
 #include "undirected.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 undirected::undirected(){
+
     cout<<"undirected object has been created\n";
 }
 undirected::undirected(undirected& one){
-    
+    vertices = one.get_vertices();
+    edges = one.get_edges();
+}
+vector<vertex> undirected::get_vertices(){
+    return vertices;
+}
+vector<edge> undirected::get_edges(){
+    return edges;
 }
 bool undirected::addvertex(vertex& v){
+    
  vertices.push_back(v);   
  return true;
 }
 
 bool undirected::removevertex(int vertexID){
+    
     //checks for any edges that have connections with vertexID
     for(int i=0;i<edges.size();i++){
         if(edges[i].get_starting_vertex().get_id()==vertexID || edges[i].get_ending_vertex().get_id()==vertexID){
@@ -45,6 +56,7 @@ bool undirected::remove(edge& e){
 return false;
 }
 bool undirected::searchvertex( vertex& v){ //const
+
     vertex one;
     one = v;
     for(int i =0;i<vertices.size();i++){
@@ -54,6 +66,7 @@ bool undirected::searchvertex( vertex& v){ //const
     return false;
 }
 bool undirected::searchedge( edge& e){//const
+
     edge one;
     one = e;
     for(int i=0;i<edges.size();i++){
@@ -64,19 +77,22 @@ bool undirected::searchedge( edge& e){//const
     }
     return false;
 }
-void undirected::display()const{
+void undirected::display(){//const
+
     vector<edge> buffer = edges;
     for(int i =0;i<edges.size();i++){
         cout<<"\n Starting vertex: "<<buffer[i].get_starting_vertex().get_id();
         cout<<" Ending vertex: "<<buffer[i].get_ending_vertex().get_id();
     }
 }
-string undirected::toString()const {
+string undirected::toString() {//const
     string graph;
     for(int i=0;i<vertices.size();i++){
         
     }
+    return graph;
 }
+
 bool undirected::clean(){
 return true;
 }
