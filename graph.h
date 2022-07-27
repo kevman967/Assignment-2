@@ -25,9 +25,9 @@ virtual bool addedge(edge& e) = 0;
 // remove the edge
 virtual bool remove(edge& e)=0;
 // return bool if a vertex exists in a graph;
-virtual bool searchvertex(const vertex& v) = 0;
+virtual bool searchvertex( vertex& v) = 0;
 // return bool if a edge exists in a graph;
-virtual bool searchedge(const edge& e) =0;
+virtual bool searchedge( edge& e) =0;
 //Bonus question: display the path that contains the vertex;
 //virtual void display(vertex& v) const = 0;
 //Bonus question: display the path that contains the edge;

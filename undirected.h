@@ -13,8 +13,8 @@ class undirected: public graph{
     virtual bool removevertex(int vertexID);
     virtual bool addedge(edge& e);
     virtual bool remove(edge& e);
-    virtual bool searchvertex(const vertex& v);
-    virtual bool searchedge(const edge& e);
+    virtual bool searchvertex( vertex& v);//const
+    virtual bool searchedge( edge& e);//const
     virtual void display() const;
     virtual string toString () const;
     virtual bool clean(); 
