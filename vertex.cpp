@@ -1,7 +1,7 @@
 #include "vertex.h"
 vertex::vertex(){
  id = 0;
- value =0;
+ value =0.0;
 }
 vertex::vertex(int one,double two){
     id = one;

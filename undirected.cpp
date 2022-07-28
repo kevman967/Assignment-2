@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 undirected::undirected(){
-
+   
     cout<<"undirected object has been created\n";
 }
 undirected::undirected(undirected& one){
@@ -40,7 +40,7 @@ bool undirected::removevertex(int vertexID){
     return false;
 }
 bool undirected::addedge(edge& e){
-    edges.push_back(e);
+    edges.push_back( e );
 return true;
 }
 bool undirected::remove(edge& e){

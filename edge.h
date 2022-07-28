@@ -8,7 +8,7 @@ class edge{
     public:
         edge();
         edge(double,vertex&,vertex&);
-        edge(edge& copy);
+        edge(edge& );
         //getter and setter
         double get_weight();
         vertex get_starting_vertex();
